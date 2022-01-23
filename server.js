@@ -11,7 +11,7 @@ app.set('view engine', 'ejs');
 
 const Controller = require('./controllers/controller');
 
-app.get('/jamshidbekJS', Controller.GET);
-app.post('/jamshidbekJS', Controller.POST);
+app.get('/', Controller.GET);
+app.post('/', Controller.POST);
 
 app.listen(PORT, console.log(PORT));
