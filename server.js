@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const ejs = require('ejs');
 
+const PORT = process.env.PORT || 5000;
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/assets', express.static('public'));
@@ -12,4 +14,4 @@ const Controller = require('./controllers/controller');
 app.get('/jamshidbekJS', Controller.GET);
 app.post('/jamshidbekJS', Controller.POST);
 
-app.listen(5000, console.log(5000));
+app.listen(PORT, console.log(PORT));
